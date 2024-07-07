@@ -16,6 +16,10 @@ public class ContaCorrente extends Conta implements ITaxas{
 
     @Override
     public double calculaTaxas() {
-        return 0;
+        if(this.getDono().getClass() == PessoaFisica.class){
+            return 10.0;
+        }else{
+            return 20.0;
+        }
     }
 }
