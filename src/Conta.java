@@ -12,8 +12,6 @@ public abstract class Conta implements ITaxas{
 
     protected double limite;
 
-    protected double totalTaxas = 0.0;
-
     private List<Operacao> operacoes;
 
     private int proximaOperacao;
@@ -98,7 +96,7 @@ public abstract class Conta implements ITaxas{
     }
 
     public void imprimirExtratoTaxas() {
-
+        double totalTaxas = this.calculaTaxas();
         System.out.println("*=*=*=*=* Extrato de taxas " + dono.getNome()+ " *=*=*=*=*");
         System.out.println("Manutenção da conta: " + this.calculaTaxas());
 
