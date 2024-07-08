@@ -51,7 +51,7 @@ public class PessoaJuridica extends Cliente implements ITaxas{
 
     @Override
     public double calculaTaxas() {
-        return 20.0;
+        return calculaTaxas();
     }
 
     public void setCnpj(String cnpj) {

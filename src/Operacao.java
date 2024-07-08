@@ -40,15 +40,31 @@ public abstract class Operacao implements ITaxas, Comparable<Operacao>{
     }
 
     @Override
-     public int compareTo(Operacao saque) {
-        if (Character.compare(this.tipo, saque.tipo) < 0){
+     public int compareTo(Operacao s) {
+        String t = Character.toString(this.tipo);
+        String operacao = Character.toString(s.tipo);
+        if (t.compareToIgnoreCase(operacao) < 0){
             return -1;
-        } else if (Character.compare(this.tipo, saque.tipo) > 0) {
+        } else if (t.compareToIgnoreCase(operacao) > 0) {
             return 1;
         }else{
             return 0;
         }
     }
+
+    /*Usando o metodo Character.compare():
+
+    public int compareTo(Operacao operacaoQualquer) {
+        if (Character.compare(this.tipo, operacaoQualquer.tipo) < 0){
+            return -1;
+        } else if (Character.compare(this.tipo, operacaoQualquer.tipo) > 0) {
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
+     */
 
 
     public void imprimir() {

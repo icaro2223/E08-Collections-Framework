@@ -53,7 +53,7 @@ public class PessoaFisica extends Cliente implements ITaxas{
 
     @Override
     public double calculaTaxas() {
-        return 10.0;
+        return calculaTaxas();
     }
 
     public String getCpf() {

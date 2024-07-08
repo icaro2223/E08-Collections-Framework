@@ -22,7 +22,7 @@ public class Main {
         conta1.sacar(23);
         conta1.sacar(45);
         conta1.sacar(150);
-        conta1.imprimirExtrato(-1);
+        conta1.imprimirExtrato(1);
         conta1.imprimirExtratoTaxas();
 
         conta2.depositar(200);

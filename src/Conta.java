@@ -80,19 +80,20 @@ public abstract class Conta implements ITaxas{
     }
 
     public void imprimirExtrato(int ordem) {
-        if(ordem == -1) {
+        if(ordem == 1) {
             System.out.println("\n======= Extrato Conta " + this.numero + "na ordem b: ======================");
             Collections.sort(this.operacoes);
             for (Operacao atual : this.operacoes) {
                 atual.imprimir();
             }
 
-        }else if(ordem == 0){
+        }else {
             System.out.println("\n======= Extrato Conta " + this.numero + "na ordem a: ======================");
             for (Operacao atual : this.operacoes) {
                 atual.imprimir();
             }
         }
+
     }
 
     public void imprimirExtratoTaxas() {
